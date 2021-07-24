@@ -30,6 +30,12 @@
       case VK_LEFT: {
 
         e.preventDefault();
+        if(this.focusedIdx == 0){
+          // should move to the last element.
+          this.focusedIdx = this.buttons.length - 1
+        }else{
+          this.focusedIdx--
+        }
 
         // This seems like a good place to do some stuff :)
 
@@ -41,6 +47,12 @@
       case VK_RIGHT: {
 
         e.preventDefault();
+
+        if(this.focusedIdx == this.buttons.length -1){
+          this.focusedIdx = 0;
+        }else{
+          this.focusedIdx++
+        }
 
         // This seems like a good place to do some stuff :)
 
